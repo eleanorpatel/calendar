@@ -7,6 +7,5 @@ body{
 
 .event{
   display: flex;
-  flex-align: center;
-  
+  align-self: center;
 }
