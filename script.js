@@ -16,3 +16,13 @@ function clearSchedule()
 const accountButton= document.GetElementById("login")
 accountButton.addEventListener("click", async()=>{})
 window.locaiton.href = login.html
+
+const addEventButton= document.GetElementById("addevent")
+addEvemtButton.addEventListener("click", async()=>{})
+window.locaiton.href = index.html
+
+if !name||!date||!time{
+  alert("Please enter correct format.")
+return}
+
+createEvent()
