@@ -1,5 +1,5 @@
-const name = getElementById("name")
-const time = getElementById("time")
+const name = document.getElementById("name")
+const time = document.getElementById("time")
 
 function createEvent()
   let event = {"name": name, "date" : date, "time": time}
@@ -12,3 +12,7 @@ function deleteItem(name)
 
 function clearSchedule()
   localStorage.clear()
+
+const accountButton= document.GetElementById("login")
+accountButton.addEventListener("click", async()=>{})
+window.locaiton.href = login.html
