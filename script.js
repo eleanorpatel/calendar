@@ -3,7 +3,12 @@ const time = getElementById("time")
 
 function createEvent()
   let event = {"name": name, "date" : date, "time": time}
-  localStorage.setItem("localEvent", JSON.stringify(event))
+  localStorage.setItem(event["name"], JSON.stringify(event))
 
-function deleteItem()
-  let item = localStorage.getItem("
+function deleteItem(name)
+  let item = localStorage.getItem(name)
+  if item{}
+    localStorage.removeItem(name)
+
+function clearSchedule()
+  localStorage.clear()
