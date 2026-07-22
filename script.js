@@ -1,28 +1,29 @@
 const name = document.getElementById("name")
+const date = document.getElementById("date")
 const time = document.getElementById("time")
 
-function createEvent()
+function createEvent(){
   let event = {"name": name, "date" : date, "time": time}
   localStorage.setItem(event["name"], JSON.stringify(event))
-
-function deleteItem(name)
+}
+function deleteItem(name){
   let item = localStorage.getItem(name)
   if item{}
     localStorage.removeItem(name)
-
-function clearSchedule()
+}
+function clearSchedule(){
   localStorage.clear()
-
+}
 const accountButton= document.GetElementById("login")
-accountButton.addEventListener("click", async()=>{})
-window.locaiton.href = login.html
+accountButton.addEventListener("click", async()=>{
+  window.locaiton.href = login.html})
 
 const addEventButton= document.GetElementById("addevent")
-addEvemtButton.addEventListener("click", async()=>{})
-window.locaiton.href = index.html
-
-if !name||!date||!time{
+addEvemtButton.addEventListener("click", async()=>{
+if (!name||!date||!time){
   alert("Please enter correct format.")
-return}
-
+  return
+}
 createEvent()
+})
+
