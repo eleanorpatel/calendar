@@ -1,7 +1,9 @@
-const months = document.GetElementById("months")
-const month = document.GetElementById("month")
+const name = getElementById("name")
+const time = getElementById("time")
 
-function hideMonths():
-  if months.styles.display == None{months.styles.display = block}
-  else
-    months.styles.display = None
+function createEvent()
+  let event = {"name": name, "date" : date, "time": time}
+  localStorage.setItem("localEvent", JSON.stringify(event))
+
+function deleteItem()
+  let item = localStorage.getItem("
