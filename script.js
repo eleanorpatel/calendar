@@ -27,3 +27,18 @@ if (!name||!date||!time){
 createEvent()
 })
 
+function loadFlaskData(){
+  fetch("\api\data")
+  .then(response=> {
+    if() !response.ok(){
+      throw newError("network response was not okay")
+    }
+    return response.json()
+  })
+  .then(data =>{
+    console.log(data)
+    document.getElementById("output").innerText = data.message
+  })
+  .catch(error => console.error("error fetching data", error))
+}
+window.onLoad = loadFlaskData
