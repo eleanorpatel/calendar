@@ -5,9 +5,22 @@ const eventlist = document.getElementById("eventlist")
 const message = document.getElementById("message")
 
 
-function createEvent(){
+async function createEvent(){
   let event = {"name": name, "date" : date, "time": time}
-  localStorage.setItem(event["name"], JSON.stringify(event))
+  try{
+      const response = await fetch("/api/data",{
+        method: "POST", 
+        headers: {contentType:application/json},
+        body: json.stringify(event)
+                                  )}
+      const data = await reponse.json()
+  if (!response.ok){ 
+    throw new Error(data.error || "could not add event")
+  }
+  name Input.value = ""
+  date Input.value = ""
+  time Input.value = ""
+  await loadEvents()
 }
 function deleteItem(name){
   let item = localStorage.getItem(name)
@@ -31,7 +44,7 @@ createEvent()
 })
 
 function loadFlaskData(){
-  fetch("\api\data")
+  fetch("/api/data")
   .then(response=> {
     if(!response.ok){
       throw newError("network response was not okay")
