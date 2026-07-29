@@ -57,10 +57,12 @@ function displayEvents(){
     eventCard.className = event-card
     const eventText = document.createElement("span")
     eventText.className = event-text
-    eventText.textContent = `${event.name}-${event.date} at ${event.time}
-  
+    eventText.textContent = `${event.name}-${event.date} at ${event.time}`
+    const deleteButton = document.createElement("button")
+    deleteButton.type = "button"
+    deleteButton.textContent = "delete"
+    deleteButton.addEventListener("click", ()=> deleteEvent(event.id))
+    eventCard.append(eventText, deleteButton)
+    eventList.appendChild(eventCard)
   }
-
 }
-
-
