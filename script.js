@@ -1,6 +1,9 @@
 const name = document.getElementById("name")
 const date = document.getElementById("date")
 const time = document.getElementById("time")
+const eventlist = document.getElementById("eventlist")
+const message = document.getElementById("message")
+
 
 function createEvent(){
   let event = {"name": name, "date" : date, "time": time}
@@ -30,7 +33,7 @@ createEvent()
 function loadFlaskData(){
   fetch("\api\data")
   .then(response=> {
-    if() !response.ok(){
+    if(!response.ok){
       throw newError("network response was not okay")
     }
     return response.json()
@@ -42,3 +45,22 @@ function loadFlaskData(){
   .catch(error => console.error("error fetching data", error))
 }
 window.onLoad = loadFlaskData
+
+function displayEvents(){
+  eventList.innerHTML = ""
+  if events.length === 0{
+    eventList.textContent = "no events yet"
+    return 
+  }
+  for (const event of events){
+    const eventCard = document.createElement("div")
+    eventCard.className = event-card
+    const eventText = document.createElement("span")
+    eventText.className = event-text
+    eventText.textContent = `${event.name}-${event.date} at ${event.time}
+  
+  }
+
+}
+
+
