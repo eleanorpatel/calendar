@@ -13,9 +13,9 @@ result=(-1,-1)
 
 for x in range(len(arr)):
   first=arr[x]
-  for y in range(len(arr)):
+  for y in range(x+1, len(arr)):
     second=arr[y]
-if first + second == num:
-  print (x, y) 
-else:
+    if first + second == num:
+      result = (x, y) 
+ 
 print(result)
