@@ -1,3 +1,0 @@
-Assign Hw FOr next week
-
-Given a random number and any array, find the first set of numbers that when added return the number. If no such number exists return -1
