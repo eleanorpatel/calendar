@@ -9,7 +9,11 @@ for x in range(10):
   arr.append(random.randint(0,9))
 
 num= random.randint(0,10)
-
+result=(-1,-1)
 
 for x in range(len(arr)):
-  
+  first=arr[x]
+  for y in range(len(arr)):
+    second=arr[y]
+
+print(result)
