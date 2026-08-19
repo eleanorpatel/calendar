@@ -18,9 +18,9 @@ async function createEvent(){
   if (!response.ok){ 
     throw new Error(data.error || "could not add event")
   }
-  name Input.value = ""
-  date Input.value = ""
-  time Input.value = ""
+  name input.value = ""
+  date input.value = ""
+  time input.value = ""
   await loadEvents()
 }
 function deleteItem(name){
