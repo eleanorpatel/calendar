@@ -3,6 +3,7 @@ const date = document.getElementById("date")
 const time = document.getElementById("time")
 const eventlist = document.getElementById("eventlist")
 const message = document.getElementById("message")
+const loginButton = document.getElementById("login") 
 
 
 async function createEvent(){
@@ -79,3 +80,7 @@ function displayEvents(){
     eventList.appendChild(eventCard)
   }
 }
+
+loginButton.addEventListener("click", => {
+ window.location.href = "login.html"
+})
