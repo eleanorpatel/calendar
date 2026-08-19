@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Page Title</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<style>
+</style>
+<script src="login.js"></script>
+<body>
+  <div class= "signin">
+      <div class= "signincontainer">
+        <label for "username"> Username: </label>
+        <input type="text" id="username" name="username">
+        <label for "password"> Password: </label>
+        <input type="password" id="password" name="password">
+        <button id="Signin"> Log in </button>
+        <h3> Need to make an account?</h3>
+        <button id="Signup"> Sign up </button> 
+  </div>
+  </div>
+
+  <script src = "login.js"> </script>
+  
+</body>
