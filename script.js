@@ -13,7 +13,7 @@ async function createEvent(){
         method: "POST", 
         headers: {contentType:application/json},
         body: json.stringify(event)
-                                  )}
+                                  }
       const data = await reponse.json()
   if (!response.ok){ 
     throw new Error(data.error || "could not add event")
