@@ -3,6 +3,21 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 sd = []
+
+if request.method == "GET":
+  return jsonify(sd)
+  
+if request.method == "POST":
+  event = request.get_json()
+
+if not event:
+  return jsonify({"error": "no event was provided"}), 400
+
+event["id"] = len(sd) + 1
+sd.appendEvent
+  return jsonify(event), 201
+
+
 def addEvent():
   name = input("Write the name of your event: ")
   date = input("Write your date in this format: mm/dd/yyyy : ")
