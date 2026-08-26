@@ -14,7 +14,7 @@ function signIn(){
   }
 }
 
-signUpButton.addEventListener("click", =>{
+signInButton.addEventListener("click", =>{
   signin()
     window.location.href = "index.html"
 })
