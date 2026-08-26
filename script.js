@@ -8,14 +8,14 @@ const loginButton = document.getElementById("login")
 
 
 async function createEvent(){
-  let event = {"name": name, "date" : date, "time": time}
+  let event = {"name": name.value, "date" : date.value, "time": time.value}
   try{
       const response = await fetch("/api/data",{
         method: "POST", 
-        headers: {contentType:application/json},
-        body: json.stringify(event)
+        headers: {"contentType:application/json"},
+        body: JSON.stringify(event)
                                   })
-      const data = await reponse.json()
+      const data = await response.json()
   if (!response.ok){ 
     throw new Error(data.error || "could not add event")
   }
@@ -24,6 +24,9 @@ async function createEvent(){
   timeInput.value = ""
   await loadEvents()
 }
+  catch(error){
+    console.error(error)
+  }
 function deleteItem(name){
   let item = localStorage.getItem(name)
   if item{}
@@ -32,12 +35,12 @@ function deleteItem(name){
 function clearSchedule(){
   localStorage.clear()
 }
-const accountButton= document.GetElementById("login")
+const accountButton= document.getElementById("login")
 accountButton.addEventListener("click", async()=>{
   window.locaiton.href = login.html})
 
 const addEventButton= document.GetElementById("addevent")
-addEvemtButton.addEventListener("click", async()=>{
+addEventButton.addEventListener("click", async()=>{
 if (!name||!date||!time){
   alert("Please enter correct format.")
   return
