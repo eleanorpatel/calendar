@@ -1,6 +1,6 @@
 import pandas as pd
 from flask import Flask, request, jsonify
-app = Flask__name__
+app = Flask(__name__)
 
 sd = []
 def addEvent():
