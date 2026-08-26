@@ -24,3 +24,4 @@ def clearSchedule():
   writeFile = []
   writeFile.to_csv("calendar.csv")
   
+@app.route("\api\data", methods = ["GET", "POST"])
