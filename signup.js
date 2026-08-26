@@ -16,6 +16,9 @@ function signIn(){
   if username == "" or password == "" or email ==""{
     alert("all fields must be filled in")
   }
+ if !validateEmail(email.value){
+  alert("not a valid email")
+ }
 }
 
 signInButton.addEventListener("click", =>{
