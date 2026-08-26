@@ -10,7 +10,7 @@ const signInButton = document.getElementById("signin")
 const email = document.getElementById("email")
 
 function signIn(){
-  if username == "" or password == ""{
+  if username == "" or password == "" or email ==""{
     alert("all fields must be filled in")
   }
 }
