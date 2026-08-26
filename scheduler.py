@@ -10,11 +10,11 @@ if request.method == "GET":
 if request.method == "POST":
   event = request.get_json()
 
-if not event:
-  return jsonify({"error": "no event was provided"}), 400
+  if not event:
+    return jsonify({"error": "no event was provided"}), 400
 
-event["id"] = len(sd) + 1
-sd.appendEvent
+  event["id"] = len(sd) + 1
+  sd.appendEvent
   return jsonify(event), 201
 
 
