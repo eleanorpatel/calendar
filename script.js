@@ -41,7 +41,7 @@ accountButton.addEventListener("click", async()=>{
 
 const addEventButton= document.GetElementById("addevent")
 addEventButton.addEventListener("click", async()=>{
-if (!name||!date||!time){
+if (!name.value||!date.value||!time.value){
   alert("Please enter correct format.")
   return
 }
