@@ -1,9 +1,6 @@
 #Assign Hw FOr next week
 
 '''Given an integer x, return true if x is a palindrome, and false otherwise.
-
- 
-
 Example 1:
 
 Input: x = 121
@@ -20,31 +17,27 @@ Input: x = 10
 Output: false
 Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
  
-
 Constraints:
 
 -231 <= x <= 231 - 1
- 
 
 Follow up: Could you solve it without converting the integer to a string?
 '''
 
 #in human words, determine if a number is the same forwards ans backwards.
-#due to how late this was posted, this is not requires to be done before class.
-import random
+#due to how late this was posted, this is not requires to be done before class
 
-arr=[]
-for x in range(10):
-  arr.append(random.randint(0,9))
+n1= 121
+n2=5008
+n3=37153
+n4=1001
+def palindromecheck(num):
+   for i in range(len(str(num))):
+    if str(n1)[0] != len(str(num)))-1;
+     return False
+   return True
 
-num= random.randint(0,10)
-result=(-1,-1)
 
-for x in range(len(arr)):
-  first=arr[x]
-  for y in range(x+1, len(arr)):
-    second=arr[y]
-    if first + second == num:
-      result = (x, y) 
- 
-print(result)
+
+
+    
