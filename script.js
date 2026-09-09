@@ -12,7 +12,7 @@ async function createEvent(){
   try{
       const response = await fetch("/api/data",{
         method: "POST", 
-        headers: {"contentType:application/json"},
+        headers: {"Content-Type":"application/json"},
         body: JSON.stringify(event)
                                   })
       const data = await response.json()
