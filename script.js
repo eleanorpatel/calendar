@@ -66,7 +66,7 @@ window.onload = loadFlaskData
 
 function displayEvents(){
   eventlist.innerHTML = ""
-  if (events.length) === 0{
+  if (events.length === 0){
     eventlist.textContent = "no events yet"
     return 
   }
