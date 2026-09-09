@@ -19,9 +19,9 @@ async function createEvent(){
   if (!response.ok){ 
     throw new Error(data.error || "could not add event")
   }
-  nameInput.value = ""
-  dateInput.value = ""
-  timeInput.value = ""
+  name.value = ""
+  date.value = ""
+  time.value = ""
   await loadEvents()
 }
   catch(error){
