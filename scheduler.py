@@ -5,7 +5,7 @@ app = Flask(__name__)
 sd = []
 
 @app.route("/api/data", methods = ["GET", "POST"])
-def event():
+def events():
   if request.method == "GET":
     return jsonify(sd)
     
