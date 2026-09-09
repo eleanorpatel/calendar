@@ -85,6 +85,6 @@ function displayEvents(){
   }
 }
 
-loginButton.addEventListener("click", => {
+loginButton.addEventListener("click", ()=> {
  window.location.href = "login.html"
 })
