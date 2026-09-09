@@ -4,6 +4,8 @@ app = Flask(__name__)
 
 sd = []
 
+@app.route("\api\data", methods = ["GET", "POST"])
+
 if request.method == "GET":
   return jsonify(sd)
   
@@ -39,4 +41,4 @@ def clearSchedule():
   writeFile = []
   writeFile.to_csv("calendar.csv")
   
-@app.route("\api\data", methods = ["GET", "POST"])
+
