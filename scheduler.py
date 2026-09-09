@@ -28,17 +28,23 @@ def addEvent():
   event = [name, date, location, time]
   df = pd.DataFrame(event, columns = ["name", "date", "location", "time"])
   df.to_csv("calendar.csv")
-  
-def deleteEvent(name):
-  readFile = pd.read_csv("calendar.csv")
-  if name not in readFile:
-    return None
-  else:
-    writeFile = readFile[readFile["name"]!= name]
-    writeFile.to_csv("calendar.csv")
-      
+
+@app.route("/api/data/<int:event_id>", methods = ["DELETE"])
+
+def deleteEvent(<event_id>):
+  for event in sd 
+    if event["id"] == event_id:
+      sd.removeEvent
+      return jsonify({"message":"event deleted"})
+  return jsonify({"error":"event not found"}), 404
+
+@app.route("/api/data/clear", methods = ["DELETE"])
+
 def clearSchedule():
-  writeFile = []
-  writeFile.to_csv("calendar.csv")
+  sd.clear
+  return jsonify({"message":"schedule cleared"})
+
+if __name__ == "__main__":
+  app.run() debug = True
   
 
