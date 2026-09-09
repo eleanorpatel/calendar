@@ -65,9 +65,9 @@ function loadFlaskData(){
 window.onload = loadFlaskData
 
 function displayEvents(){
-  eventList.innerHTML = ""
+  eventlist.innerHTML = ""
   if (events.length) === 0{
-    eventList.textContent = "no events yet"
+    eventlist.textContent = "no events yet"
     return 
   }
   for (const event of events){
@@ -81,7 +81,7 @@ function displayEvents(){
     deleteButton.textContent = "delete"
     deleteButton.addEventListener("click", ()=> deleteEvent(event.id))
     eventCard.append(eventText, deleteButton)
-    eventList.appendChild(eventCard)
+    eventlist.appendChild(eventCard)
   }
 }
 
