@@ -29,7 +29,7 @@ async function createEvent(){
   }
 function deleteItem(name){
   let item = localStorage.getItem(name)
-  if item{}
+  if (item){
     localStorage.removeItem(name)
 }
 function clearSchedule(){
@@ -37,9 +37,9 @@ function clearSchedule(){
 }
 const accountButton= document.getElementById("login")
 accountButton.addEventListener("click", async()=>{
-  window.locaiton.href = login.html})
+  window.location.href = login.html})
 
-const addEventButton= document.GetElementById("addevent")
+const addEventButton= document.getElementById("addevent")
 addEventButton.addEventListener("click", async()=>{
 if (!name.value||!date.value||!time.value){
   alert("Please enter correct format.")
@@ -52,7 +52,7 @@ function loadFlaskData(){
   fetch("/api/data")
   .then(response=> {
     if(!response.ok){
-      throw newError("network response was not okay")
+      throw new Error("network response was not okay")
     }
     return response.json()
   })
@@ -62,7 +62,7 @@ function loadFlaskData(){
   })
   .catch(error => console.error("error fetching data", error))
 }
-window.onLoad = loadFlaskData
+window.onload = loadFlaskData
 
 function displayEvents(){
   eventList.innerHTML = ""
